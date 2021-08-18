@@ -9,12 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class CustomerController extends AbstractController
 {
     /**
-     * @Route("/customer", name="customer")
+     * @Route("/", name="customer")
      */
     public function index(): Response
     {
+        $customerName  = "John Doe";
         return $this->render('customer/index.html.twig', [
-            'controller_name' => 'CustomerController',
+            'name' => $customerName,
         ]);
     }
 }
